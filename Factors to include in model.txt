@@ -108,3 +108,4 @@ angle.tBodyAccJerkMean..gravityMean.         double
 angle.tBodyGyroMean.gravityMean.             double
 angle.tBodyGyroJerkMean.gravityMean.         double
 activity                                  6 integer
+
