@@ -1,0 +1,110 @@
+                           Levels Storage
+tBodyAcc.mean...X                  double
+tBodyAcc.mean...Y                  double
+tBodyAcc.mean...Z                  double
+tBodyAcc.sma..                     double
+tBodyAcc.correlation...X.Y         double
+tBodyAcc.correlation...X.Z         double
+tBodyAcc.correlation...Y.Z         double
+tGravityAcc.sma..                  double
+angle.tBodyAccMean.gravity.                  double
+angle.tBodyAccJerkMean..gravityMean.         double
+angle.tBodyGyroMean.gravityMean.             double
+angle.tBodyGyroJerkMean.gravityMean.         double
+(nix) angle.X.gravityMean.                         double
+(nix) angle.Y.gravityMean.                         double
+(nix) angle.Z.gravityMean.                         double
+activity                        6 integer
+
+Note that principal components on only the numeric
+ variables is calculated, and so we can not use this
+ approach to remove categoric variables from  consideration.
+
+ Any numeric variables with relatively large rotation
+ values (negative or positive) in any of the first few
+ components are generally variables that you may wish
+ to include in the modelling.
+
+Rattle timestamp: 2013-03-03 21:08:35 SHANNON
+======================================================================
+Standard deviations:
+ [1] 1.3072915 1.2893840 1.1172297 1.0629685 1.0508193 0.9957437 0.9382860 0.9257806 0.8906947
+[10] 0.8565725 0.7259873 0.6025661
+
+Rotation:
+                                             PC1         PC2         PC3         PC4         PC5
+tBodyAcc.mean...X                    -0.66752073  0.07532892 -0.07186842  0.05684404 -0.02914204
+tBodyAcc.mean...Y                    -0.22424479  0.02166643  0.01334968 -0.71065659  0.01092880
+tBodyAcc.mean...Z                     0.37674899 -0.05806559  0.08967537  0.40883978  0.10848328
+tBodyAcc.sma..                        0.11164035  0.55001796 -0.21416627  0.04320919  0.04080492
+tBodyAcc.correlation...X.Y           -0.09917876 -0.61555658  0.18253301  0.04656317 -0.03719743
+tBodyAcc.correlation...X.Z           -0.17149965 -0.04427855  0.62657091  0.03885057  0.21132717
+tBodyAcc.correlation...Y.Z            0.02005120  0.48493935  0.26358949 -0.05773875  0.17646284
+tGravityAcc.sma..                     0.08905013 -0.21384424 -0.59034277 -0.09913160 -0.04009982
+angle.tBodyAccMean.gravity.           0.52918190 -0.09075002  0.18005194 -0.50172795 -0.03088442
+angle.tBodyAccJerkMean..gravityMean. -0.09675647 -0.03674877 -0.15461122  0.14053378  0.06220528
+angle.tBodyGyroMean.gravityMean.     -0.07072546  0.09614242  0.10456067 -0.07083015 -0.69707655
+angle.tBodyGyroJerkMean.gravityMean. -0.08802874 -0.08584475 -0.17204120 -0.17141485  0.64503382
+                                             PC6           PC7          PC8          PC9
+tBodyAcc.mean...X                     0.14860115 -0.0007045128  0.121001249  0.002966561
+tBodyAcc.mean...Y                    -0.05838700  0.1005436854  0.524770144 -0.182111555
+tBodyAcc.mean...Z                     0.04050858  0.4290391745  0.573554800 -0.035727344
+tBodyAcc.sma..                        0.08636117 -0.1337299553 -0.188806274 -0.208797651
+tBodyAcc.correlation...X.Y            0.02357761  0.0264753896  0.007879359 -0.111011681
+tBodyAcc.correlation...X.Z           -0.05853025 -0.2004253302 -0.141093460  0.427170532
+tBodyAcc.correlation...Y.Z           -0.13596714  0.1227022289  0.247487250  0.411440655
+tGravityAcc.sma..                     0.03873573 -0.1158746943  0.126004927  0.717489820
+angle.tBodyAccMean.gravity.          -0.09647389 -0.1209304620 -0.161938868 -0.012720765
+angle.tBodyAccJerkMean..gravityMean. -0.95439960 -0.0945719379  0.034151884 -0.094143178
+angle.tBodyGyroMean.gravityMean.     -0.14512956  0.5837600437 -0.259049991  0.183902885
+angle.tBodyGyroJerkMean.gravityMean. -0.01385133  0.5951758556 -0.392132632  0.015340844
+                                              PC10         PC11        PC12
+tBodyAcc.mean...X                     0.0326162855  0.062049894  0.70558426
+tBodyAcc.mean...Y                     0.2500370611 -0.040019995 -0.24026626
+tBodyAcc.mean...Z                     0.3195131000  0.045372426  0.21822911
+tBodyAcc.sma..                        0.4772584600 -0.546924620  0.06425737
+tBodyAcc.correlation...X.Y           -0.0860017381 -0.742280689  0.04862246
+tBodyAcc.correlation...X.Z            0.5221826968  0.065201895 -0.08344728
+tBodyAcc.correlation...Y.Z           -0.5228799965 -0.347771913  0.04532568
+tGravityAcc.sma..                     0.1674499160 -0.110745741  0.02237584
+angle.tBodyAccMean.gravity.           0.0005348047  0.051685561  0.61125966
+angle.tBodyAccJerkMean..gravityMean.  0.0723056351 -0.011238169  0.08097971
+angle.tBodyGyroMean.gravityMean.      0.1370835717 -0.045127328 -0.01717708
+angle.tBodyGyroJerkMean.gravityMean.  0.0319226844  0.009328059  0.01721046
+
+Rattle timestamp: 2013-03-03 21:08:35 SHANNON
+======================================================================
+Importance of components:
+                          PC1    PC2   PC3     PC4     PC5     PC6     PC7     PC8     PC9    PC10
+Standard deviation     1.3073 1.2894 1.117 1.06297 1.05082 0.99574 0.93829 0.92578 0.89069 0.85657
+Proportion of Variance 0.1424 0.1385 0.104 0.09416 0.09202 0.08263 0.07337 0.07142 0.06611 0.06114
+Cumulative Proportion  0.1424 0.2810 0.385 0.47914 0.57115 0.65378 0.72714 0.79857 0.86468 0.92582
+                          PC11    PC12
+Standard deviation     0.72599 0.60257
+Proportion of Variance 0.04392 0.03026
+Cumulative Proportion  0.96974 1.00000
+
+Rattle timestamp: 2013-03-03 21:08:35 SHANNON
+======================================================================
+
+
+
+tBodyAcc.mean...X                            double
+tBodyAcc.mean...Y                            double
+tBodyAcc.mean...Z                            double
+tBodyAcc.sma..                               double
+tGravityAcc.sma..                            double
+tGravityAcc.correlation...X.Y                double
+tGravityAcc.correlation...X.Z                double
+tGravityAcc.correlation...Y.Z                double
+tBodyGyro.correlation...X.Y                  double
+tBodyGyro.correlation...X.Z                  double
+tBodyGyroJerk.correlation...X.Y              double
+tBodyGyroJerk.correlation...X.Z              double
+tBodyGyroJerk.correlation...Y.Z              double
+fBodyAcc.sma..                               double
+angle.tBodyAccMean.gravity.                  double
+angle.tBodyAccJerkMean..gravityMean.         double
+angle.tBodyGyroMean.gravityMean.             double
+angle.tBodyGyroJerkMean.gravityMean.         double
+activity                                  6 integer

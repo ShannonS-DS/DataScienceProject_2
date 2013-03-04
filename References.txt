@@ -1,0 +1,3 @@
+References:
+http://www.dimensionengineering.com/info/accelerometers - A beginner’s guide to accelerometers
+http://en.wikipedia.org/wiki/Receiver_operating_characteristic - a receiver operating characteristic (ROC), or simply ROC curve, explanation (used in model evaluation in Rattle) using sensitivity and specificity -  ROC graph is sometimes called the sensitivity vs (1 - specificity) plot with FPR and TPR as x and y axes respectively, which depicts relative trade-offs between true positive (benefits) and false positive (costs), since TPR is equivalent with sensitivity and FPR is equal to 1 - specificity.
