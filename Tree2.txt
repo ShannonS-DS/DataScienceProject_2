@@ -1,0 +1,87 @@
+Summary of the Decision Tree model for Classification (built using 'rpart'):
+
+n= 4106 
+
+node), split, n, loss, yval, (yprob)
+      * denotes terminal node
+
+ 1) root 4106 3328 standing (0.18 0.17 0.19 0.16 0.14 0.15)  
+   2) fBodyAccJerk.bandsEnergy...1.8< -0.982425 2244 1466 standing (0.33 0.32 0.35 0 0 0)  
+     4) tGravityAcc.min...X< 0.09618424 750    0 laying (1 0 0 0 0 0) *
+     5) tGravityAcc.min...X>=0.09618424 1494  716 standing (0 0.48 0.52 0 0 0)  
+      10) angle.Y.gravityMean.< 0.1404701 755   95 sitting (0 0.87 0.13 0 0 0) *
+      11) angle.Y.gravityMean.>=0.1404701 739   56 standing (0 0.076 0.92 0 0 0) *
+   3) fBodyAccJerk.bandsEnergy...1.8>=-0.982425 1862 1202 walk (0.00054 0 0 0.35 0.31 0.34)  
+     6) tBodyAccMag.std..< -0.0299492 1314  667 walk (0 0 0 0.49 0.065 0.44)  
+      12) tGravityAcc.arCoeff...Z.2< 0.5637653 762  167 walk (0 0 0 0.78 0.088 0.13)  
+        24) fBodyGyro.maxInds.X>=-0.9666667 664   74 walk (0 0 0 0.89 0.039 0.072) *
+        25) fBodyGyro.maxInds.X< -0.9666667 98   46 walkup (0 0 0 0.051 0.42 0.53) *
+      13) tGravityAcc.arCoeff...Z.2>=0.5637653 552   71 walkup (0 0 0 0.094 0.034 0.87) *
+     7) tBodyAccMag.std..>=-0.0299492 548   64 walkdown (0.0018 0 0 0.024 0.88 0.091) *
+
+Classification tree:
+rpart(formula = activity ~ ., data = crs$dataset[crs$train, c(crs$input, 
+    crs$target)], method = "class", parms = list(split = "information"), 
+    control = rpart.control(usesurrogate = 0, maxsurrogate = 0))
+
+Variables actually used in tree construction:
+[1] angle.Y.gravityMean.           fBodyAccJerk.bandsEnergy...1.8 fBodyGyro.maxInds.X           
+[4] tBodyAccMag.std..              tGravityAcc.arCoeff...Z.2      tGravityAcc.min...X           
+
+Root node error: 3328/4106 = 0.81052
+
+n= 4106 
+
+        CP nsplit rel error  xerror      xstd
+1 0.211839      0   1.00000 1.00000 0.0075455
+2 0.169772      2   0.57632 0.57692 0.0096069
+3 0.141526      3   0.40655 0.40925 0.0090654
+4 0.128906      4   0.26502 0.26082 0.0078615
+5 0.014123      5   0.13612 0.14784 0.0062529
+6 0.010000      6   0.12200 0.13281 0.0059676
+
+Time taken: 24.02 secs
+
+Rattle timestamp: 2013-03-04 18:12:25 SHANNON
+======================================================================
+Tree as rules: 
+
+ Rule number: 24 [activity=walk cover=664 (16%) prob=590.00]
+   fBodyAccJerk.bandsEnergy...1.8>=-0.9824
+   tBodyAccMag.std..< -0.02995
+   tGravityAcc.arCoeff...Z.2< 0.5638
+   fBodyGyro.maxInds.X>=-0.9667
+
+ Rule number: 13 [activity=walkup cover=552 (13%) prob=52.00]
+   fBodyAccJerk.bandsEnergy...1.8>=-0.9824
+   tBodyAccMag.std..< -0.02995
+   tGravityAcc.arCoeff...Z.2>=0.5638
+
+ Rule number: 7 [activity=walkdown cover=548 (13%) prob=13.00]
+   fBodyAccJerk.bandsEnergy...1.8>=-0.9824
+   tBodyAccMag.std..>=-0.02995
+
+ Rule number: 25 [activity=walkup cover=98 (2%) prob=5.00]
+   fBodyAccJerk.bandsEnergy...1.8>=-0.9824
+   tBodyAccMag.std..< -0.02995
+   tGravityAcc.arCoeff...Z.2< 0.5638
+   fBodyGyro.maxInds.X< -0.9667
+
+ Rule number: 11 [activity=standing cover=739 (18%) prob=0.00]
+   fBodyAccJerk.bandsEnergy...1.8< -0.9824
+   tGravityAcc.min...X>=0.09618
+   angle.Y.gravityMean.>=0.1405
+
+ Rule number: 10 [activity=sitting cover=755 (18%) prob=0.00]
+   fBodyAccJerk.bandsEnergy...1.8< -0.9824
+   tGravityAcc.min...X>=0.09618
+   angle.Y.gravityMean.< 0.1405
+
+ Rule number: 4 [activity=laying cover=750 (18%) prob=0.00]
+   fBodyAccJerk.bandsEnergy...1.8< -0.9824
+   tGravityAcc.min...X< 0.09618
+
+ [1]  7  1  8  9 10 12 13 11  6  5  4  3  2
+
+Rattle timestamp: 2013-03-04 18:17:04 SHANNON
+======================================================================

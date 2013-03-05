@@ -1,0 +1,27 @@
+Score
+
+A model can be deployed on a dataset to obtain scores or
+classifications for each observation in the dataset.
+
+By default the testing dataset (if any) will be scored. Otherwise the
+training dataset is scored. As an alternative, a CSV file can be
+loaded and scored. This choice of what is scored is controlled by the
+radio button options.
+
+For binary models a probability score can be recorded. For regression
+models a value is recorded for each observation. Otherwise a class
+will be recorded for each observation. This can be controlled by the
+Class and Probability radio buttons.
+
+The resulting CSV file will include just those variables having a role
+as Identifier (plus the Target and the Score), or else all of the
+variables.
+
+The name of a CSV file into which the results will be written will be
+prompted for.
+
+I need to figure out what are included in these files.
+See files saved to C:\Users\SHANNON\Documents\R\dataanalysis-master\dataanalysis-master\Projects\Assignment_2
+mySStrainData_test_score_all.csv
+mySStrainData_train_score_all.csv
+mySStrainData_score_all.csv

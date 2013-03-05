@@ -1,0 +1,67 @@
+Random Forest Model
+
+A random forest is an ensemble (i.e., a collection) of un-pruned
+decision trees. Ensemble models are often robust to variance and bias.
+
+Random forests are often used when we have large training datasets and
+particularly a very large number of input variables (hundreds or even
+thousands of input variables). The algorithm is efficient with respect
+to a large number of variables since it repeatedly subsets the
+variables available. Use the Importance button to view the relative
+importance of each variable.
+
+A random forest model is typically made up of tens or hundreds of
+decision trees. Use the Errors button to view the rate of decrease of
+the model error as the number of trees increases.
+
+Summary of the Random Forest Model
+==================================
+
+Number of observations used to build the model: 4106
+Missing value imputation is active.
+
+Call:
+ randomForest(formula = activity ~ .,
+              data = crs$dataset[crs$sample, c(crs$input, crs$target)],
+              ntree = 500, mtry = 53, importance = TRUE, replace = FALSE, na.action = na.roughfix)
+
+               Type of random forest: classification
+                     Number of trees: 500
+No. of variables tried at each split: 53
+
+        OOB estimate of  error rate: 2.26%
+Confusion matrix:
+         laying sitting standing walk walkdown walkup class.error
+laying      750       1        0    0        0      0 0.001331558
+sitting       0     691       25    0        0      0 0.034916201
+standing      0      31      747    0        0      0 0.039845758
+walk          0       0        0  644        8      8 0.024242424
+walkdown      0       0        0    6      559      5 0.019298246
+walkup        0       0        0    2        7    622 0.014263074
+
+==================================
+
+Error matrix for the Random Forest model on mySStrainData [validate] (counts):
+
+          Predicted
+Actual     laying sitting standing walk walkdown walkup
+  laying      182       0        0    0        0      0
+  sitting       0     163        3    0        0      0
+  standing      0       5      145    0        0      0
+  walk          0       0        0  156        1      1
+  walkdown      0       0        0    0      107      0
+  walkup        0       0        0    0        0    117
+
+Error matrix for the Random Forest model on mySStrainData [validate] (%):
+
+          Predicted
+Actual     laying sitting standing walk walkdown walkup
+  laying       21       0        0    0        0      0
+  sitting       0      19        0    0        0      0
+  standing      0       1       16    0        0      0
+  walk          0       0        0   18        0      0
+  walkdown      0       0        0    0       12      0
+  walkup        0       0        0    0        0     13
+
+Rattle timestamp: 2013-03-04 21:47:52 SHANNON
+======================================================================
