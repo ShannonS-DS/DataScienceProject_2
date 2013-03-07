@@ -1,0 +1,16 @@
+Count of subject,Activity,,,,,,,,,,,,,,
+Score,laying,sitting,standing,walk,walkdown,walkup,Grand Total,,laying,sitting,standing,walk,walkdown,walkup,Grand Total
+Hit,,,,,,,,Hit,,,,,,,
+laying,293,,,,,,293,laying,100%,,,,,,100%
+sitting,,226,,,,,226,sitting,,93%,,,,,93%
+standing,,,267,,,,267,standing,,,88%,,,,88%
+walk,,,,228,,,228,walk,,,,99%,,,99%
+walkdown,,,,,194,,194,walkdown,,,,,99%,,99%
+walkup,,,,,,214,214,walkup,,,,,,98%,98%
+Miss,,,,,,,,Miss,,,,,,,
+sitting,,,38,,,,38,sitting,,,12%,,,,12%
+standing,,16,,,,,16,standing,,7%,,,,,7%
+walk,,,,,,1,1,walk,,,,,,0.5%,0%
+walkdown,,,,2,,4,6,walkdown,,,,1%,,2%,3%
+walkup,,,,1,1,,2,walkup,,,,0.4%,1%,,1%
+Grand Total,293,242,305,231,195,219,1485,Grand Total,0%,7%,12%,1%,1%,2%,23%
